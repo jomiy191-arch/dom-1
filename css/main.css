@@ -1,9 +1,11 @@
+/* Global styles */
 body {
     margin: 0;
     padding: 0;
     font-family: Poppins, sans-serif;
     background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=3840&q=80") no-repeat center center/cover;
-    height: 100vh;
+    background-size: cover;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +16,8 @@ body {
     background: rgba(255, 255, 255, 0.15);
     padding: 25px;
     border-radius: 20px;
-    width: 400px;
+    width: 90%;
+    max-width: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -29,10 +32,11 @@ body {
 .input-area {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 #inputText {
-    flex: 1;
+    flex: 1 1 200px;
     padding: 12px;
     border-radius: 10px;
     border: none;
@@ -62,6 +66,7 @@ body {
     margin-top: 15px;
     border-radius: 12px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
@@ -70,19 +75,15 @@ body {
 }
 
 @keyframes fade {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 span {
     font-size: 18px;
     color: white;
+    flex: 1 1 100%;
+    margin-bottom: 5px;
 }
 
 .deleteBtn, .statusBtn, .editBtn {
@@ -92,6 +93,7 @@ span {
     border: none;
     cursor: pointer;
     margin-left: 5px;
+    margin-top: 5px;
     transition: 0.3s;
 }
 
@@ -103,3 +105,46 @@ span {
 
 .editBtn { background: rgb(67, 147, 255); }
 .editBtn:hover { transform: scale(1.05); }
+
+#count {
+    color: white;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+/* Responsive media queries */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 20px;
+        width: 95%;
+    }
+    .title {
+        font-size: 26px;
+    }
+    #inputText {
+        font-size: 16px;
+        padding: 10px;
+    }
+    #addBtn {
+        font-size: 18px;
+        padding: 10px 16px;
+    }
+    span {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .wrapper {
+        width: 80%;
+    }
+    .title {
+        font-size: 28px;
+    }
+    #inputText {
+        font-size: 17px;
+    }
+    #addBtn {
+        font-size: 20px;
+    }
+}
