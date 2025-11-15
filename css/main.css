@@ -1,4 +1,3 @@
-/* Global styles */
 body {
     margin: 0;
     padding: 0;
@@ -16,8 +15,7 @@ body {
     background: rgba(255, 255, 255, 0.15);
     padding: 25px;
     border-radius: 20px;
-    width: 90%;
-    max-width: 400px;
+    width: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -32,11 +30,10 @@ body {
 .input-area {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 #inputText {
-    flex: 1 1 200px;
+    flex: 1;
     padding: 12px;
     border-radius: 10px;
     border: none;
@@ -66,7 +63,6 @@ body {
     margin-top: 15px;
     border-radius: 12px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
@@ -82,8 +78,6 @@ body {
 span {
     font-size: 18px;
     color: white;
-    flex: 1 1 100%;
-    margin-bottom: 5px;
 }
 
 .deleteBtn, .statusBtn, .editBtn {
@@ -93,7 +87,6 @@ span {
     border: none;
     cursor: pointer;
     margin-left: 5px;
-    margin-top: 5px;
     transition: 0.3s;
 }
 
