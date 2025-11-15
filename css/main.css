@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     padding: 0;
@@ -16,7 +15,7 @@ body {
     padding: 25px;
     border-radius: 20px;
     width: 400px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .title {
@@ -66,13 +65,19 @@ body {
     justify-content: space-between;
     align-items: center;
     backdrop-filter: blur(5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: fade 0.3s ease;
 }
 
 @keyframes fade {
-    from {opacity: 0; transform: translateY(10px);}
-    to   {opacity: 1; transform: translateY(0);}
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 span {
@@ -80,17 +85,21 @@ span {
     color: white;
 }
 
-.deleteBtn {
-    background: rgb(255, 67, 67);
-    border: none;
+.deleteBtn, .statusBtn, .editBtn {
     padding: 7px 12px;
     color: white;
     border-radius: 8px;
+    border: none;
     cursor: pointer;
+    margin-left: 5px;
     transition: 0.3s;
 }
 
-.deleteBtn:hover {
-    background: rgb(255, 40, 40);
-    transform: scale(1.1);
-}
+.deleteBtn { background: rgb(255, 67, 67); }
+.deleteBtn:hover { background: rgb(255, 40, 40); transform: scale(1.1); }
+
+.statusBtn { background: rgb(255, 67, 67); }
+.statusBtn:hover { transform: scale(1.05); }
+
+.editBtn { background: rgb(67, 147, 255); }
+.editBtn:hover { transform: scale(1.05); }

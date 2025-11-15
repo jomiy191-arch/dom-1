@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Super List App</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body>
+    <div class="wrapper">
+        <div class="box">
+            <h1 class="title">The students in Islom's group</h1>
 
-<div class="wrapper">
-    <div class="box">
-        <h1 class="title">My Tasks</h1>
+            <div class="input-area">
+                <input id="inputText" type="text" placeholder="Kimlar bor darsda">
+                <button id="addBtn">Qoshish</button>
+            </div>
+            <br>
 
-        <div class="input-area">
-            <input id="inputText" type="text" placeholder="nimadur yozing">
-            <button id="addBtn">Qoshish</button>
+            <p id="count" style="color:white; margin-top:10px; font-size:20px;"> Odamlar soni: 0 ta, ✅ 0, ❌ 0</p>
+
+            <div id="list"></div>
         </div>
-
-        <div id="list"></div>
     </div>
-</div>
 
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
